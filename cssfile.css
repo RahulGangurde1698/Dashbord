@@ -1,0 +1,207 @@
+ 
+ body{
+    background-color:rgba(245,245,250,255);
+ }
+ .navbar{
+    list-style-type: none;
+    width: 40px;
+    background-color:#ffffff;
+    position: fixed;
+    height: 100%;
+    display: block;
+ }
+ .navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 130px;
+  }
+  .navbar ul li{
+    color:rgba(200,201,214,255) ;
+    padding: 12px;
+    font-size:13px;
+    display: block;
+  }
+ 
+  .topbar{
+    height: 25px;
+    width: 650px;
+    background-color:#ffffff;
+    margin-left: 60px;
+    margin-top: 15px;
+    position: absolute;
+  }
+
+ .topbar pre {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    display: inline-block;
+    font-size: 8px;
+    
+ }
+ .topbar span {
+    float: right;
+   
+ }
+
+ button{
+    color:#9900ff;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 6px;
+    height: 14px;
+   border-color:#9900ff;
+   border-radius: 2px;
+   padding:  0px 24px;
+ }
+
+.cards{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.cards pre{
+  font-size: 10px;
+  margin-left: 10px;
+}
+#BTC{
+   background-color: #ffffff;
+    border: none;
+    margin-top: 5px;
+    float: right;
+    font-size:11px;
+    box-shadow: 0.5px 0.5px rgb(120, 107, 107);
+    border-radius: 3px;
+    color: rgb(88, 80, 80);
+  margin-right:10px ;
+}
+
+.column1 {
+    float: left;
+    width: 313px;
+    padding: 0 10px;
+}
+  
+  @media screen and (max-width: 600px) {
+    .column1 {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card1 {
+    position: relative;
+    height: 150px;
+    width:320px ;
+   background-color: #ffffff;
+   border-radius: 5px;
+   margin-top: 20px;
+
+  }
+ 
+.column2{
+  column-count: 3;
+  margin-top: 20px;
+  text-align: center;
+  column-gap: 25px;
+  padding: 10px;
+  font-size: 6px;
+  font-family: verdana;
+  column-rule-width:1px;
+  column-rule-style: solid;
+  column-rule-color: rgb(107, 100, 100);
+}
+
+.column2 p{
+  color: rgb(88, 80, 80);
+}
+
+#bold{
+  font-weight: bolder;
+}
+
+.progress-circle {
+  font-size: 20px;
+  margin-top: 10px;
+  margin: 30px;
+  position: relative; 
+  padding: 0;
+  width: 5em;
+  height: 5em;
+  background-color:#f3f1ff; 
+  border-radius: 50%;
+  line-height: 5em;
+  position: absolute;
+}
+
+.progress-circle:after{
+   border: none;
+   position: absolute;
+   top: 0.35em;
+   left: 0.35em;
+   text-align: center;
+   display: block;
+   border-radius: 50%;
+   width: 4.3em;
+   height: 4.3em;
+   background-color: white;
+   content: " ";
+}
+
+.progress-circle span {
+   position: absolute;
+   line-height: 100px;
+   font-size: 15px;
+   margin-left: 10px;
+   text-align: center;
+   display: block;
+   color: black;
+   z-index: 2;
+}
+.left-half-clipper { 
+  /* a round circle */
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute; 
+  clip: rect(0, 5em, 5em, 2.5em);
+}
+/* when p>50, don't clip left half*/
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto,auto,auto,auto);
+}
+.value-bar {
+  position: absolute;
+  clip: rect(0, 2.5em, 5em, 0);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.45em solid #9900ff; /*The border is 0.35 but making it larger removes visual artifacts */
+  /*background-color: #4D642D;*/ /* for debug */
+  box-sizing: border-box;
+ 
+}
+.progress-circle.p25 .value-bar { transform: rotate(90deg); }
+
+.coins{
+  position: absolute;
+  margin-top:10px;
+  margin-left: 170px;
+}
+
+.coins ul li{
+ font-size: 10px;
+ font-weight: bold;
+ color: #907a9e;
+}
+
+.charts{
+  position: absolute;
+  height: 500px;
+  margin-left: 10px;
+  margin-top: 200px;
+}

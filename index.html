@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="cssfile.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li><i class="fa-solid fa-bars"></i></li>
+      <li><i class="fa-solid fa-briefcase"></i></li>
+      <li><i class="fa-solid fa-arrow-right-arrow-left"></i></li>
+      <li><i class="fa">&#xf009;</i></li>
+    </ul>
+  </div>
+  <div class="topbar">
+    <pre>  <i class="fa-solid fa-circle-info"></i>  Exchange Not Connected</pre>
+    <span>
+      <pre>Trial Subscripstion-7 more days left  <button>Renew Subscripstion</button>   </pre>
+    </span>
+  </div>
+
+  <div class="cards">
+
+    <div class="row1">
+      <div class="column1">
+        <div class="card1">
+          <button id="BTC">2.03145 BTC</button>
+          <div id="bold">
+            <pre><i class="fa-solid fa-money-check-dollar"></i> Balance </pre>
+            <p style="font-size:10px; margin-left:10px;">&#36 <span
+                style="font-size:16px; font-family:'Verdana';">25,200.7 </span></p>
+            <div class="column2">
+              <p style="margin-top:0px ;">&#8595 Invested</p>
+              <span style="font-size:10px;">&#36 10,450.60</span>
+              <p>&#8593 % Profit</p>
+              <span style="font-size:10px;">+60%</span>
+              <p>&#8593 USD Profit</p>
+              <span style="font-size:10px;">&#36 15,650.60</span>
+            </div>
+            <button
+              style="font-size:10px; padding:0 10px; height: 20px; width: 100px; margin-left: 10px; font-weight: bold;">Add
+              Exchange</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column1">
+        <div class="card1">
+          <div class="progress-bar">
+            <div class="progress-circle p25">
+              <span>&#36 15,650.60</span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="coins">
+            <ul>
+              <li style="color: blueviolet;">Bitcoin <br> <span style="font-size:10px; color: blueviolet;">&#36
+                  10,450.60</span></li><br>
+              <li> Etherium <br><span style="font-size:10px;">&#36 15,450.60</span></li><br>
+              <li>Monero <br><span style="font-size:10px;">&#36 20,450.60</span></li><br>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    
+
+      <div class="charts">
+        <canvas id="myChart" style="width:100%;max-width:600px; max-height: 600px;"></canvas>
+        <script>
+          var xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+          var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+          new Chart("myChart", {
+            type: "line",
+            data: {
+              labels: xValues,
+              datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+              }]
+            },
+            options: {
+              legend: { display: false },
+              scales: {
+                yAxes: [{ ticks: { min: 6, max: 16 } }],
+              }
+            }
+          });
+        </script>
+      </div>
+
+
+
+</body>
+
+</html>
